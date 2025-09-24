@@ -5,7 +5,8 @@ function App() {
   const [games, setGames] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api/games")
+    // fetch("http://localhost:5000/api/games")
+    fetch("https://game-ui-test-1.onrender.com/")
       .then((res) => res.json())
       .then((data) => setGames(data));
 

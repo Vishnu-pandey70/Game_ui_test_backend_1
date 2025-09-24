@@ -1,18 +1,16 @@
 const express = require("express");
 const cors = require("cors");
-const fs = require("fs");
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Load JSON file (you can replace this with MongoDB later)
-const rawData = fs.readFileSync("Game_list.json");
-const games = JSON.parse(rawData);
+// Serve static files (like Game_list.json)
+app.use(express.static("public"));
 
-// API to fetch all games
+
 app.get("/api/games", (req, res) => {
-  res.json(games);
+  res.sendFile(__dirname + "/public/Game_list.json");
 });
 
 const PORT = 5000;
