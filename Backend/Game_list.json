@@ -1,0 +1,2068 @@
+[{
+  "_id": {
+    "$oid": "6667f2632ae6453ebda1c845"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ010067",
+  "game_name": "Ludo",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/ludo.png-1734497155614",
+  "game_category": {
+    "Wheel": "",
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "priority": 3,
+  "operational_status": "live",
+  "provider_name": "mobzway",
+  "provider_code": "MGP",
+  "integration_env_config": [
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "ludo",
+      "canvas": "",
+      "panel": "",
+      "_id": {
+        "$oid": "6667f2632ae6453ebda1c846"
+      }
+    },
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "ludo-staging.iomhost.com",
+      "_id": {
+        "$oid": "6667f2632ae6453ebda1c847"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2025-05-02T04:28:47.093Z"
+  },
+  "createdAt": {
+    "$date": "2024-06-11T06:44:51.562Z"
+  },
+  "__v": 0,
+  "game_subcategory": [
+    "table"
+  ],
+  "game_tag": [
+    "Most Popular",
+    "Skill Game"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66e0240b48e1b74e8ef4c99d"
+  },
+  "opr_id": "230201",
+  "game_code": "SPB02001",
+  "game_name": "Aviator",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/qt/spribeavaitor.png",
+  "game_category": {
+    "Wheel": "",
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "priority": 25,
+  "operational_status": "live",
+  "provider_name": "SPRIBE",
+  "provider_code": "SPB",
+  "integration_env_config": [
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "qt.mobzway.games",
+      "_id": {
+        "$oid": "6667f2632ae6453ebda1c862"
+      }
+    },
+    {
+      "int_platform": "aunity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "ludo",
+      "canvas": "",
+      "panel": "",
+      "_id": {
+        "$oid": "6667f2632ae6453ebda1c846"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2025-08-29T13:21:13.144Z"
+  },
+  "createdAt": {
+    "$date": "2024-06-11T06:44:51.639Z"
+  },
+  "__v": 0,
+  "game_subcategory": [
+    "crash"
+  ],
+  "game_tag": [
+    "Most Popular",
+    "Newly Added"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66e28ea0ac80c3a266698f3b"
+  },
+  "opr_id": "230201",
+  "game_code": "BTG04001",
+  "game_name": "Live Roulette",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/qt/liveroulette.png",
+  "game_category": {
+    "Wheel": "",
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "priority": 26,
+  "operational_status": "live",
+  "provider_name": "BETER LIVE",
+  "provider_code": "BTL",
+  "integration_env_config": [
+    {
+      "int_platform": "aunity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "ludo",
+      "canvas": "",
+      "panel": "",
+      "_id": {
+        "$oid": "6667f2632ae6453ebda1c846"
+      }
+    },
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "qt.mobzway.games",
+      "_id": {
+        "$oid": "6667f2632ae6453ebda1c862"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2024-12-17T11:59:56.484Z"
+  },
+  "createdAt": {
+    "$date": "2024-06-11T06:44:51.639Z"
+  },
+  "__v": 0,
+  "game_subcategory": [
+    "live cassino"
+  ],
+  "game_tag": [
+    "Most Popular",
+    "Newly Added"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66e28f33ac80c3a266698f3c"
+  },
+  "opr_id": "230201",
+  "game_code": "SAG04001",
+  "game_name": "M Teen Patti 20 20",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/qt/Live2020.png",
+  "game_category": {
+    "Wheel": "",
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "priority": 27,
+  "operational_status": "live",
+  "provider_name": "SA GAMING",
+  "provider_code": "SAG",
+  "integration_env_config": [
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "qt.mobzway.games",
+      "_id": {
+        "$oid": "6667f2632ae6453ebda1c862"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2024-06-11T06:44:51.639Z"
+  },
+  "createdAt": {
+    "$date": "2024-06-11T06:44:51.639Z"
+  },
+  "__v": 0,
+  "game_subcategory": [
+    "live cassino"
+  ],
+  "game_tag": [
+    "Most Popular",
+    "Newly Added"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66e28f95ac80c3a266698f3e"
+  },
+  "opr_id": "230201",
+  "game_code": "THK03001",
+  "game_name": "Midas Golden Touch",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/qt/mindas.png",
+  "game_category": {
+    "Wheel": "",
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "priority": 28,
+  "operational_status": "live",
+  "provider_name": "THUNDERKICK",
+  "provider_code": "THK",
+  "integration_env_config": [
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "qt.mobzway.games",
+      "_id": {
+        "$oid": "6667f2632ae6453ebda1c862"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2024-06-11T06:44:51.639Z"
+  },
+  "createdAt": {
+    "$date": "2024-06-11T06:44:51.639Z"
+  },
+  "__v": 0,
+  "game_subcategory": [
+    "slot"
+  ],
+  "game_tag": [
+    "Newly Added",
+    "Most Popular"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66e29001ac80c3a266698f41"
+  },
+  "opr_id": "230201",
+  "game_code": "BTL04001",
+  "game_name": "Live Roulette",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/qt/liveroulette.png",
+  "game_category": {
+    "Wheel": "",
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "priority": 30,
+  "operational_status": "live",
+  "provider_name": "BETER LIVE",
+  "provider_code": "BTL",
+  "integration_env_config": [
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "qt.mobzway.games",
+      "_id": {
+        "$oid": "6667f2632ae6453ebda1c862"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2024-06-11T06:44:51.639Z"
+  },
+  "createdAt": {
+    "$date": "2024-06-11T06:44:51.639Z"
+  },
+  "__v": 0,
+  "game_subcategory": [
+    "live cassino"
+  ],
+  "game_tag": [
+    "Newly Added",
+    "Most Popular"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66e290c5ac80c3a266698f42"
+  },
+  "opr_id": "230201",
+  "game_code": "OT02001",
+  "game_name": "Black Jack Classic",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/qt/Blackjack_classic.png",
+  "game_category": {
+    "Wheel": "",
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "priority": 31,
+  "operational_status": "live",
+  "provider_name": "ONE TOUCH",
+  "provider_code": "OT",
+  "integration_env_config": [
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "qt.mobzway.games",
+      "_id": {
+        "$oid": "6667f2632ae6453ebda1c862"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2024-06-11T06:44:51.639Z"
+  },
+  "createdAt": {
+    "$date": "2024-06-11T06:44:51.639Z"
+  },
+  "__v": 0,
+  "game_subcategory": [
+    "table"
+  ],
+  "game_tag": [
+    "Newly Added",
+    "Most Popular"
+  ]
+},
+{
+  "_id": {
+    "$oid": "66e97fdd826a76a06d5b9818"
+  },
+  "opr_id": "230201",
+  "game_code": "SPB02007",
+  "game_name": "Plinko",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/qt/plinko.png",
+  "game_category": {
+    "Wheel": "",
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "priority": 36,
+  "operational_status": "live",
+  "provider_name": "SPRIBE",
+  "provider_code": "SPB-plinko",
+  "integration_env_config": [
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "qt.mobzway.games",
+      "_id": {
+        "$oid": "6667f2632ae6453ebda1c862"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2024-06-11T06:44:51.639Z"
+  },
+  "createdAt": {
+    "$date": "2024-06-11T06:44:51.639Z"
+  },
+  "__v": 0,
+  "game_subcategory": [
+    "instant win"
+  ],
+  "game_tag": [
+    "Newly Added",
+    "Most Popular"
+  ]
+},
+{
+  "_id": {
+    "$oid": "673dd3d74ce44787376bd22d"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ010004",
+  "game_name": "Teenpatti",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/teenpatti.png",
+  "game_category": {
+    "Card": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "operational_status": "live",
+  "priority": 4,
+  "provider_name": "mobzway",
+  "provider_code": "MGP",
+  "integration_env_config": [
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "tp-staging.iomhost.com"
+    },
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "TeenPatti",
+      "canvas": "",
+      "panel": ""
+    }
+  ],
+  "updatedAt": {
+    "$date": "2023-06-08T07:05:01.982Z"
+  },
+  "game_tag": [
+    "hot",
+    "popular"
+  ],
+  "game_subcategory": [
+    "table"
+  ]
+},
+{
+  "_id": {
+    "$oid": "673dd4914ce44787376bd22f"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ010001",
+  "game_name": "Poker",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/poker.png",
+  "game_category": {
+    "Card": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "priority": 3,
+  "operational_status": "live",
+  "provider_name": "mobzway",
+  "provider_code": "pr001",
+  "integration_env_config": [
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "poker",
+      "canvas": "",
+      "panel": "",
+      "_id": {
+        "$oid": "6667f2632ae6453ebda1c846"
+      }
+    },
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "poker-staging.iomhost.com"
+    }
+  ],
+  "updatedAt": {
+    "$date": "2023-06-08T07:05:01.982Z"
+  },
+  "game_tag": [
+    "Skill Game",
+    "popular"
+  ],
+  "game_subcategory": [
+    "table"
+  ]
+},
+{
+  "_id": {
+    "$oid": "64e4b859921cf198bfcd4319"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ020006",
+  "game_name": "Andar Bahar",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/ab5classic_new.png",
+  "game_category": {
+    "Wheel": "https://pic.onlinewebfonts.com/svg/img_549574.png",
+    "Roulette": "https://static.vecteezy.com/system/resources/previews/006/530/497/non_2x/a-casino-roulette-icon-in-isometric-design-vector.jpg"
+  },
+  "game_status": true,
+  "operational_status": "live",
+  "provider_name": "mobzway",
+  "provider_code": "MGP",
+  "priority": 1,
+  "integration_env_config": [
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "AB5",
+      "canvas": "ab5_lobby",
+      "panel": "",
+      "_id": {
+        "$oid": "6502ad3dbeb3d043f6a887c2"
+      }
+    },
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "ab5.mobzway.games",
+      "_id": {
+        "$oid": "6502ad2bbeb3d043f6a88780"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2023-09-14T06:50:37.170Z"
+  },
+  "game_tag": [
+    "hot",
+    "popular"
+  ],
+  "game_subcategory": [
+    "table"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6507f0a614623d6146b49ccd"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ010096",
+  "game_name": "Call Break",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/callbreak.png",
+  "game_category": {
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "operational_status": "live",
+  "provider_name": "mobzway",
+  "provider_code": "MGP",
+  "priority": 5,
+  "game_subcategory": [
+    "table"
+  ],
+  "integration_env_config": [
+    {
+      "int_platform": "aunity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "http://callbreak-staging.iomhost.com",
+      "canvas": "",
+      "panel": "",
+      "_id": {
+        "$oid": "6667f2632ae6453ebda1c846"
+      }
+    },
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "callbreak-staging.iomhost.com",
+      "_id": {
+        "$oid": "6502ad2bbeb3d043f6a88786"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2025-05-02T12:39:35.240Z"
+  },
+  "game_tag": [
+    "popular",
+    "Skill Game"
+  ]
+},
+{
+  "_id": {
+    "$oid": "673dd6ba4ce44787376bd236"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ020044",
+  "game_name": "Dragon Tiger",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/dragontiger.png",
+  "game_category": {
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "operational_status": "live",
+  "provider_name": "mobzway",
+  "priority": 1,
+  "provider_code": "MGP",
+  "integration_env_config": [
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "blackjack",
+      "canvas": "bj_lobby",
+      "panel": ""
+    },
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "dt-staging.iomhost.com"
+    }
+  ],
+  "updatedAt": {
+    "$date": "2023-06-09T06:33:36.182Z"
+  },
+  "game_tag": [
+    "hot",
+    "popular"
+  ],
+  "game_subcategory": [
+    "casino"
+  ]
+},
+{
+  "_id": {
+    "$oid": "673dd7b84ce44787376bd237"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ020080",
+  "game_name": "Crazy Win",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/crazywin.png",
+  "game_category": {
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "priority": 9,
+  "operational_status": "live",
+  "provider_name": "mobzway",
+  "provider_code": "MGP",
+  "integration_env_config": [
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "CrazyWin",
+      "canvas": "CrazyWin_lobby",
+      "panel": ""
+    },
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "crazywin-staginng.iomhost.com"
+    }
+  ],
+  "updatedAt": {
+    "$date": "2023-06-09T06:33:36.182Z"
+  },
+  "game_tag": [
+    "hot",
+    "popular"
+  ],
+  "game_subcategory": [
+    "casino"
+  ]
+},
+{
+  "_id": {
+    "$oid": "673dd80e4ce44787376bd239"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ020093",
+  "game_name": "Jhandi Munda",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/jhandimunda.png",
+  "game_category": {
+    "Card": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "operational_status": "live",
+  "priority": 5,
+  "provider_name": "mobzway",
+  "provider_code": "MGP",
+  "integration_env_config": [
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "jhandi munda",
+      "canvas": "",
+      "panel": "",
+      "_id": {
+        "$oid": "6667f2632ae6453ebda1c846"
+      }
+    },
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "jm-staging.iomhost.com"
+    }
+  ],
+  "updatedAt": {
+    "$date": "2023-06-08T07:05:01.982Z"
+  },
+  "game_tag": [
+    "hot",
+    "popular"
+  ],
+  "game_subcategory": [
+    "casino"
+  ]
+},
+{
+  "_id": {
+    "$oid": "673ddc2c4ce44787376bd23e"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ020079",
+  "game_name": "Fortune Wheel",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/fortune.png",
+  "game_category": {
+    "Card": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg",
+    "Roulette": "",
+    "Wheel": ""
+  },
+  "game_status": true,
+  "priority": 20,
+  "operational_status": "live",
+  "provider_name": "mobzway",
+  "provider_code": "MGP",
+  "integration_env_config": [
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "ludo",
+      "canvas": "",
+      "panel": "",
+      "_id": {
+        "$oid": "6667f2632ae6453ebda1c846"
+      }
+    },
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "fortune-staging.iomhost.com"
+    }
+  ],
+  "updatedAt": {
+    "$date": "2024-06-11T04:59:40.338Z"
+  },
+  "game_tag": [
+    "hot",
+    "popular"
+  ],
+  "game_subcategory": [
+    "casino"
+  ]
+},
+{
+  "_id": {
+    "$oid": "673de7f37fe31c7edd320d1b"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ020081",
+  "game_name": "Captain wheel",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/captainwheel.png",
+  "game_category": {
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "operational_status": "live",
+  "provider_name": "mobzway",
+  "provider_code": "MGP",
+  "priority": 25,
+  "integration_env_config": [
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "landscape",
+      "scene": "CaptainWheel",
+      "canvas": "captain_wheel_lobby",
+      "panel": "",
+      "_id": {
+        "$oid": "6502ad3dbeb3d043f6a887c8"
+      }
+    },
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "landscape",
+      "url_path": "captain-dev.ihostbo.com",
+      "_id": {
+        "$oid": "6502ad2cbeb3d043f6a88794"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2023-09-14T06:50:37.179Z"
+  },
+  "game_tag": [
+    "hot",
+    "popular"
+  ],
+  "game_subcategory": [
+    "casino"
+  ]
+},
+{
+  "_id": {
+    "$oid": "673de8477fe31c7edd320d1c"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ020105",
+  "game_name": "Wingo",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/wingo.png",
+  "game_category": {
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "operational_status": "live",
+  "provider_name": "mobzway",
+  "provider_code": "MGP",
+  "priority": 16,
+  "game_subcategory": [
+    "casino"
+  ],
+  "game_tag": [
+    "hot",
+    "popular"
+  ],
+  "integration_env_config": [
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "wingo",
+      "canvas": "wingo_lobby",
+      "panel": "",
+      "_id": {
+        "$oid": "6502ad3dbeb3d043f6a887b3"
+      }
+    },
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "wingo-staging.iomhost.com",
+      "_id": {
+        "$oid": "6502ad2bbeb3d043f6a88784"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2023-09-14T06:50:37.112Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "673de8757fe31c7edd320d1d"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ020019",
+  "game_name": "Baccarat",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/baccarat.png",
+  "game_category": {
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "operational_status": "live",
+  "provider_name": "sakshi",
+  "provider_code": "sakshi01",
+  "priority": 11,
+  "integration_env_config": [
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "baccarat",
+      "canvas": "baccarat_lobby",
+      "panel": "",
+      "_id": {
+        "$oid": "6502ad3dbeb3d043f6a887bc"
+      }
+    },
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "baccart-staging.iomhost.com",
+      "_id": {
+        "$oid": "6502ad2bbeb3d043f6a88786"
+      }
+    }
+  ],
+  "game_subcategory": [
+    "casino"
+  ],
+  "game_tag": [
+    "hot",
+    "popular"
+  ],
+  "updatedAt": {
+    "$date": "2023-09-14T06:50:37.153Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "673de9057fe31c7edd320d1f"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ020102",
+  "game_name": "Aviator",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/crash.png",
+  "game_category": {
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "operational_status": "live",
+  "provider_name": "mobzway",
+  "provider_code": "MGP",
+  "priority": 18,
+  "integration_env_config": [
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "landscape",
+      "url_path": "crash.mobzway.games"
+    },
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "crash",
+      "canvas": "",
+      "panel": "",
+      "_id": {
+        "$oid": "6502ad3dbeb3d043f6a887b3"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2023-09-14T06:42:00.801Z"
+  },
+  "game_tag": [
+    "hot",
+    "popular"
+  ],
+  "game_subcategory": [
+    "crash"
+  ]
+},
+{
+  "_id": {
+    "$oid": "673de93b7fe31c7edd320d20"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ020108",
+  "game_name": "7 UP Down",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/7updown.png",
+  "game_category": {
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "operational_status": "live",
+  "provider_name": "mobzway",
+  "provider_code": "MGP",
+  "priority": 28,
+  "integration_env_config": [
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "landscape",
+      "scene": "7UpDown",
+      "canvas": "",
+      "panel": "",
+      "_id": {
+        "$oid": "6502ad3dbeb3d043f6a887c8"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2023-09-14T06:50:37.179Z"
+  },
+  "game_tag": [
+    "hot",
+    "popular"
+  ]
+},
+{
+  "_id": {
+    "$oid": "673de95a7fe31c7edd320d21"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ020071",
+  "game_name": "Amar Akbar Anthony",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/AAA.png",
+  "game_category": {
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "priority": 30,
+  "operational_status": "live",
+  "provider_name": "sakshi",
+  "provider_code": "sakshi01",
+  "integration_env_config": [
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "AmarAkbarAnthony",
+      "canvas": "AmarAkbarAnthony_lobby",
+      "panel": ""
+    }
+  ],
+  "updatedAt": {
+    "$date": "2023-06-09T06:33:36.182Z"
+  },
+  "game_tag": [
+    "hot",
+    "popular"
+  ]
+},
+{
+  "_id": {
+    "$oid": "673de9847fe31c7edd320d22"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ020090",
+  "game_name": "32 cards",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/32cards.png",
+  "game_category": {
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "priority": 32,
+  "operational_status": "live",
+  "provider_name": "sakshi",
+  "provider_code": "sakshi01",
+  "integration_env_config": [
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "32Cards",
+      "canvas": "",
+      "panel": ""
+    },
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": ""
+    }
+  ],
+  "updatedAt": {
+    "$date": "2023-06-09T06:33:36.182Z"
+  },
+  "game_tag": [
+    "hot",
+    "popular"
+  ],
+  "game_subcategory": [
+    "table"
+  ]
+},
+{
+  "_id": {
+    "$oid": "673eb455b7db89b8a0bd06f6"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ020097",
+  "game_name": "Tambola",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/tambola.png",
+  "game_category": {
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "priority": 6,
+  "operational_status": "live",
+  "provider_name": "sakshi",
+  "provider_code": "MGP",
+  "integration_env_config": [
+    {
+      "int_platform": "aunity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "tambola",
+      "canvas": "tambola",
+      "panel": ""
+    },
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "tambola-staging.iomhost.com"
+    }
+  ],
+  "updatedAt": {
+    "$date": "2025-03-06T11:19:42.963Z"
+  },
+  "game_tag": [
+    "Skill Game",
+    "popular"
+  ],
+  "game_subcategory": [
+    "table"
+  ]
+},
+{
+  "_id": {
+    "$oid": "673ebe27c6d5a91e03fb3741"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ020100",
+  "game_name": "Zoo Roulette",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/zoo.png",
+  "game_status": true,
+  "priority": 22,
+  "operational_status": "live",
+  "provider_name": "mobzway",
+  "provider_code": "MGP",
+  "integration_env_config": [
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "zooroulette.mobzway.games",
+      "_id": {
+        "$oid": "6667f307ba0cecbf0f2f9300"
+      }
+    },
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "http://qt.mobzway.games",
+      "canvas": "http://qt.mobzway.games",
+      "panel": ""
+    }
+  ],
+  "game_tag": [
+    "hot",
+    "popular"
+  ],
+  "updatedAt": {
+    "$date": "2025-08-29T13:22:16.957Z"
+  },
+  "createdAt": {
+    "$date": "2024-06-11T06:47:35.562Z"
+  },
+  "__v": 0,
+  "game_subcategory": [
+    "roulette"
+  ]
+},
+{
+  "_id": {
+    "$oid": "673ef36067b10c36286760c4"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ020099",
+  "game_name": "Car Roulette",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/carroulette.png",
+  "game_category": {
+    "Card": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg",
+    "Roulette": "",
+    "Wheel": ""
+  },
+  "game_status": true,
+  "priority": 23,
+  "operational_status": "live",
+  "provider_name": "mobzway",
+  "provider_code": "MGP",
+  "integration_env_config": [
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "carroulette.mobzway.games"
+    }
+  ],
+  "updatedAt": {
+    "$date": "2024-06-11T04:59:40.337Z"
+  },
+  "game_tag": [
+    "hot",
+    "popular"
+  ],
+  "game_subcategory": [
+    "roulette"
+  ]
+},
+{
+  "_id": {
+    "$oid": "673f242aee567b20211b225e"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ010005",
+  "game_name": "Rummy",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/rummy_2x.png",
+  "game_category": {
+    "Wheel": "https://pic.onlinewebfonts.com/svg/img_549574.png",
+    "Roulette": "https://static.vecteezy.com/system/resources/previews/006/530/497/non_2x/a-casino-roulette-icon-in-isometric-design-vector.jpg"
+  },
+  "game_status": true,
+  "operational_status": "live",
+  "provider_name": "mobzway",
+  "provider_code": "MGP",
+  "priority": 0,
+  "game_subcategory": [
+    "table"
+  ],
+  "integration_env_config": [
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "landscape",
+      "scene": "Rummy",
+      "canvas": "Rummy_lobby",
+      "panel": ""
+    },
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "landscape",
+      "url_path": "rummy-staging.iomhost.com",
+      "_id": {
+        "$oid": "6502f6d29017bfa6a1b6deb6"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2023-09-14T12:04:34.795Z"
+  },
+  "game_tag": [
+    "hot",
+    "popular",
+    "Skill Game"
+  ]
+},
+{
+  "_id": {
+    "$oid": "673f2758ee567b20211b225f"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ030116",
+  "game_name": "Happy Farmer",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/farmer.png",
+  "game_category": {
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "operational_status": "live",
+  "provider_name": "mobzway",
+  "provider_code": "MGP",
+  "priority": 23,
+  "integration_env_config": [
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "landscape",
+      "url_path": "happyfarmer.mobzway.games"
+    },
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "Happy_Farmer",
+      "canvas": "",
+      "panel": "",
+      "_id": {
+        "$oid": "6502ad3dbeb3d043f6a887b3"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2025-02-13T11:13:18.154Z"
+  },
+  "game_tag": [
+    "hot",
+    "popular"
+  ],
+  "game_subcategory": [
+    "slot"
+  ]
+},
+{
+  "_id": {
+    "$oid": "673f2804ee567b20211b2260"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ030118",
+  "game_name": "Vegas Slot",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/vegas.png",
+  "game_category": {
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "operational_status": "live",
+  "provider_name": "mobzway",
+  "provider_code": "MGP",
+  "priority": 21,
+  "game_subcategory": [
+    "slot"
+  ],
+  "integration_env_config": [
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "landscape",
+      "url_path": "vegas.mobzway.games"
+    },
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "vegas_slot",
+      "canvas": "",
+      "panel": "",
+      "_id": {
+        "$oid": "6502ad3dbeb3d043f6a887b3"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2023-09-14T06:42:00.801Z"
+  },
+  "game_tag": [
+    "hot",
+    "popular"
+  ]
+},
+{
+  "_id": {
+    "$oid": "673f28c7ee567b20211b2261"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ020101",
+  "game_name": "Cricket Roulette",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/cricketroulette.png",
+  "game_category": {
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "operational_status": "live",
+  "provider_name": "mobzway",
+  "provider_code": "MGP",
+  "priority": 24,
+  "game_subcategory": [
+    "roulette"
+  ],
+  "integration_env_config": [
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "landscape",
+      "url_path": "cricketroulette.mobzway.games"
+    },
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "crash",
+      "canvas": "",
+      "panel": "",
+      "_id": {
+        "$oid": "6502ad3dbeb3d043f6a887b3"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2023-09-14T06:42:00.801Z"
+  },
+  "game_tag": [
+    "hot",
+    "popular"
+  ]
+},
+{
+  "_id": {
+    "$oid": "673f2cf1ee567b20211b2262"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ020017",
+  "game_name": "European Roullete",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/europeanroulette.png",
+  "game_category": {
+    "Wheel": "https://pic.onlinewebfonts.com/svg/img_549574.png",
+    "Roulette": "https://static.vecteezy.com/system/resources/previews/006/530/497/non_2x/a-casino-roulette-icon-in-isometric-design-vector.jpg"
+  },
+  "game_status": true,
+  "operational_status": "live",
+  "provider_name": "mobzway",
+  "provider_code": "MGP",
+  "priority": 15,
+  "game_subcategory": [
+    "roulette"
+  ],
+  "integration_env_config": [
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "EuropeanRouletteTimer",
+      "canvas": "ar_lobby",
+      "panel": "",
+      "_id": {
+        "$oid": "6502ad3dbeb3d043f6a887bf"
+      }
+    },
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "eroulette.mobzway.games",
+      "_id": {
+        "$oid": "6502ad2cbeb3d043f6a887a0"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2025-09-15T06:25:39.734Z"
+  },
+  "game_tag": [
+    "hot",
+    "popular"
+  ]
+},
+{
+  "_id": {
+    "$oid": "673f2d52ee567b20211b2263"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ020015",
+  "game_name": "American Roullete",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/americanroulette.png",
+  "game_category": {
+    "Wheel": "https://pic.onlinewebfonts.com/svg/img_549574.png",
+    "Roulette": "https://static.vecteezy.com/system/resources/previews/006/530/497/non_2x/a-casino-roulette-icon-in-isometric-design-vector.jpg"
+  },
+  "game_status": true,
+  "operational_status": "live",
+  "provider_name": "mobzway",
+  "provider_code": "MGP",
+  "priority": 19,
+  "game_subcategory": [
+    "roulette"
+  ],
+  "integration_env_config": [
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "americanRoulette",
+      "canvas": "ar_lobby",
+      "panel": "",
+      "_id": {
+        "$oid": "6502ad3dbeb3d043f6a887c5"
+      }
+    },
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "american.mobzway.games",
+      "_id": {
+        "$oid": "6502ad2bbeb3d043f6a88788"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2023-09-14T06:50:37.175Z"
+  },
+  "game_tag": [
+    "hot",
+    "popular"
+  ]
+},
+{
+  "_id": {
+    "$oid": "673f2dffee567b20211b2264"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ020027",
+  "game_name": "Single Chance Timer",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/singlechance.png",
+  "game_category": {
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "operational_status": "live",
+  "provider_name": "mobzway",
+  "provider_code": "MGP",
+  "priority": 12,
+  "integration_env_config": [
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "single_chance",
+      "canvas": "sc_lobby",
+      "panel": "",
+      "_id": {
+        "$oid": "6502ad3dbeb3d043f6a887b9"
+      }
+    },
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "sct-staging.iomhost.com",
+      "_id": {
+        "$oid": "6502ad2cbeb3d043f6a887a2"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2023-09-14T06:50:37.143Z"
+  },
+  "game_tag": [
+    "hot",
+    "popular"
+  ],
+  "game_subcategory": [
+    "casino"
+  ]
+},
+{
+  "_id": {
+    "$oid": "673f2f23ee567b20211b2265"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ020104",
+  "game_name": "Mines",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/mines.png",
+  "game_category": {
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "operational_status": "live",
+  "provider_name": "mobzway",
+  "provider_code": "MGP",
+  "priority": 22,
+  "integration_env_config": [
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "landscape",
+      "url_path": "mines.mobzway.games"
+    },
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "mines",
+      "canvas": "",
+      "panel": "",
+      "_id": {
+        "$oid": "6502ad3dbeb3d043f6a887b3"
+      }
+    }
+  ],
+  "game_subcategory": [
+    "slot"
+  ],
+  "updatedAt": {
+    "$date": "2023-09-14T06:42:00.801Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "673f3038ee567b20211b2266"
+  },
+  "opr_id": "230201",
+  "game_code": "SPB02002",
+  "game_name": "Dice",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/qt/plinko.png",
+  "game_category": {
+    "Wheel": "",
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "priority": 60,
+  "operational_status": "live",
+  "provider_name": "SPRIBE",
+  "provider_code": "SPB-plinko",
+  "integration_env_config": [
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "qt.mobzway.games",
+      "_id": {
+        "$oid": "6667f2632ae6453ebda1c862"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2024-06-11T06:44:51.639Z"
+  },
+  "createdAt": {
+    "$date": "2024-06-11T06:44:51.639Z"
+  },
+  "__v": 0,
+  "game_subcategory": [
+    "instant win"
+  ],
+  "game_tag": [
+    "Newly Added",
+    "Most Popular"
+  ]
+},
+{
+  "_id": {
+    "$oid": "673f308fee567b20211b2267"
+  },
+  "opr_id": "230201",
+  "game_code": "SPB02006",
+  "game_name": "TRB-Mines",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/qt/plinko.png",
+  "game_category": {
+    "Wheel": "",
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "priority": 60,
+  "operational_status": "live",
+  "provider_name": "SPRIBE",
+  "provider_code": "SPB-plinko",
+  "integration_env_config": [
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "qt.mobzway.games",
+      "_id": {
+        "$oid": "6667f2632ae6453ebda1c862"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2024-06-11T06:44:51.639Z"
+  },
+  "createdAt": {
+    "$date": "2024-06-11T06:44:51.639Z"
+  },
+  "__v": 0,
+  "game_subcategory": [
+    "instant win"
+  ],
+  "game_tag": [
+    "Newly Added",
+    "Most Popular"
+  ]
+},
+{
+  "_id": {
+    "$oid": "673f31a1ee567b20211b2268"
+  },
+  "opr_id": "230201",
+  "game_code": "SPB02006",
+  "game_name": "TRB-Mines",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/qt/plinko.png",
+  "game_category": {
+    "Wheel": "",
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "priority": 60,
+  "operational_status": "live",
+  "provider_name": "MZ020106",
+  "provider_code": "Red vs Black",
+  "integration_env_config": [
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "qt.mobzway.games",
+      "_id": {
+        "$oid": "6667f2632ae6453ebda1c862"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2024-06-11T06:44:51.639Z"
+  },
+  "createdAt": {
+    "$date": "2024-06-11T06:44:51.639Z"
+  },
+  "__v": 0,
+  "game_subcategory": [
+    "instant win"
+  ],
+  "game_tag": [
+    "Newly Added",
+    "Most Popular"
+  ]
+},
+{
+  "_id": {
+    "$oid": "674590ba6be18d9c968c2316"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ010098",
+  "game_name": "Snake & Ladder",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/snake.png",
+  "game_category": {
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "operational_status": "live",
+  "provider_name": "mobzway",
+  "provider_code": "MGP",
+  "priority": 13,
+  "game_subcategory": [
+    "table"
+  ],
+  "integration_env_config": [
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "landscape",
+      "url_path": "snake.mobzway.games",
+      "_id": {
+        "$oid": "6502ab38a19770d49884f8cb"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2023-09-22T06:50:00.801Z"
+  },
+  "game_tag": [
+    "Most Popular",
+    "Skill Game"
+  ]
+},
+{
+  "_id": {
+    "$oid": "676bfa9bc2a3f3cb92724c3a"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ020117",
+  "game_name": "Color Prediction",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/colour.png",
+  "game_category": {
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg",
+    "Wheel": ""
+  },
+  "game_status": true,
+  "priority": 8,
+  "operational_status": "live",
+  "provider_name": "mobzway",
+  "provider_code": "MGP",
+  "integration_env_config": [
+    {
+      "int_platform": "unity1",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "Wingo",
+      "canvas": "wingo_lobby",
+      "panel": ""
+    },
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "colourprediction.mobzway.games"
+    }
+  ],
+  "updatedAt": {
+    "$date": "2024-06-10T13:27:28.628Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "679ca3ba5822e4f3a41440c0"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ020088",
+  "game_name": "Sorrat",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/sorat.png",
+  "game_category": {
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "operational_status": "live",
+  "provider_name": "Mobzway",
+  "provider_code": "MGP",
+  "priority": 25,
+  "integration_env_config": [
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "landscape",
+      "url_path": "sorat.mobzway.games",
+      "_id": {
+        "$oid": "6502ab39a19770d49884f8d4"
+      }
+    },
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "ludo",
+      "canvas": "lu_lobby",
+      "panel": "",
+      "_id": {
+        "$oid": "6502aaf8a19770d49884f8bd"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2025-02-13T11:13:18.188Z"
+  },
+  "game_subcategory": [
+    "casino"
+  ],
+  "game_tag": [
+    "Most Popular"
+  ]
+},
+{
+  "_id": {
+    "$oid": "67a9ca611c1bc16e8ef3c564"
+  },
+  "opr_id": "230201",
+  "game_code": "MGP10001",
+  "game_name": "Poker Beta",
+  "game_icon": "https://cp.bopanel.xyz/theme/comman/web_game_images/poker.jpg",
+  "game_category": {
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "operational_status": "live",
+  "provider_name": "mobzway",
+  "provider_code": "MGP",
+  "priority": 50,
+  "integration_env_config": [
+    {
+      "int_platform": "aunity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "poker",
+      "canvas": "pk_lobby",
+      "panel": "",
+      "_id": {
+        "$oid": "6502aaf7a19770d49884f8a2"
+      }
+    },
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "landscape",
+      "url_path": "/game/teenpatti/",
+      "_id": {
+        "$oid": "6502ab38a19770d49884f8cb"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2025-06-06T05:27:17.833Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67c574ec3b7ba2402642bda5"
+  },
+  "opr_id": "230201",
+  "game_code": "MGP010004",
+  "game_name": "Teen Patti Beta  ",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230808/TeenpattiVariation.png",
+  "game_category": {
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "operational_status": "live",
+  "provider_name": "mobzway",
+  "provider_code": "MGP",
+  "integration_env_config": [
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "Teenpatti_Socket",
+      "canvas": "",
+      "panel": ""
+    },
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "tpnew.mobzway.games"
+    }
+  ],
+  "updatedAt": {
+    "$date": "2023-06-09T06:33:36.182Z"
+  },
+  "priority": 6,
+  "game_subcategory": [
+    "table"
+  ],
+  "game_tag": [
+    "hot",
+    "Most Popular",
+    "HINDI STYLE"
+  ]
+},
+{
+  "_id": {
+    "$oid": "67c599043b7ba2402642bdaa"
+  },
+  "opr_id": "230201",
+  "game_code": "MGP010067",
+  "game_name": "Ludo Beta",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/ludo.png-1734497155614",
+  "game_category": {
+    "Wheel": "",
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "priority": 7,
+  "operational_status": "live",
+  "provider_name": "mobzway",
+  "provider_code": "MGP",
+  "integration_env_config": [
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "ludo",
+      "canvas": "",
+      "panel": "",
+      "_id": {
+        "$oid": "6667f2632ae6453ebda1c846"
+      }
+    },
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "ludo.mobzway.games",
+      "_id": {
+        "$oid": "6667f2632ae6453ebda1c847"
+      }
+    }
+  ],
+  "updatedAt": {
+    "$date": "2025-02-19T05:41:28.834Z"
+  },
+  "createdAt": {
+    "$date": "2024-06-11T06:44:51.562Z"
+  },
+  "__v": 0,
+  "game_subcategory": [
+    "table"
+  ],
+  "game_tag": [
+    "Most Popular",
+    "Skill Game"
+  ]
+},
+{
+  "_id": {
+    "$oid": "67dd0f31232125ac3511e8b3"
+  },
+  "opr_id": "230201",
+  "game_code": "MGP010005",
+  "game_name": "Rummy Beta",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/rummy_2x.png",
+  "game_category": {
+    "Wheel": "https://pic.onlinewebfonts.com/svg/img_549574.png",
+    "Roulette": "https://static.vecteezy.com/system/resources/previews/006/530/497/non_2x/a-casino-roulette-icon-in-isometric-design-vector.jpg"
+  },
+  "game_status": true,
+  "operational_status": "live",
+  "provider_name": "mobzway",
+  "provider_code": "MGP",
+  "priority": 6,
+  "game_subcategory": [
+    "table"
+  ],
+  "integration_env_config": [
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "landscape",
+      "url_path": "rummynew.mobzway.games",
+      "_id": {
+        "$oid": "6502f6d29017bfa6a1b6deb6"
+      }
+    },
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "landscape",
+      "scene": "Rummy",
+      "canvas": "Rummy_lobby",
+      "panel": ""
+    }
+  ],
+  "updatedAt": {
+    "$date": "2023-09-14T12:04:34.795Z"
+  },
+  "game_tag": [
+    "hot",
+    "popular",
+    "Skill Game"
+  ]
+},
+{
+  "_id": {
+    "$oid": "68024f7ae8af5e26eb88a0d3"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ020085",
+  "game_name": "Lucky War",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/luckywar.png",
+  "game_category": {
+    "Roulette": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "priority": 6,
+  "operational_status": "live",
+  "provider_name": "sakshi",
+  "provider_code": "MGP",
+  "integration_env_config": [
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "landscape",
+      "scene": "LuckyWar",
+      "canvas": "LuckyWar_lobby",
+      "panel": ""
+    }
+  ],
+  "updatedAt": {
+    "$date": "2023-06-09T06:33:36.182Z"
+  }
+},
+{
+  "_id": {
+    "$oid": "67625558cdf254ec74475d1a"
+  },
+  "opr_id": "230201",
+  "game_code": "MZ020116",
+  "game_name": "All in Poker",
+  "game_icon": "https://gms-mobz.s3.ap-southeast-1.amazonaws.com/game_icon/230201/poker.png",
+  "game_category": {
+    "Card": "https://www.shutterstock.com/image-vector/fortune-play-cards-icon-simple-600w-1924862051.jpg"
+  },
+  "game_status": true,
+  "priority": 2,
+  "operational_status": "live",
+  "provider_name": "mobzway",
+  "provider_code": "pr001",
+  "integration_env_config": [
+    {
+      "int_platform": "unity",
+      "opening_env": "unity",
+      "orientation": "portrait",
+      "scene": "allin-poker",
+      "canvas": "",
+      "panel": "",
+      "_id": {
+        "$oid": "6667f2632ae6453ebda1c846"
+      }
+    },
+    {
+      "int_platform": "H5",
+      "opening_env": "browser",
+      "orientation": "portrait",
+      "url_path": "all-in-poker-staging.iomhost.com"
+    }
+  ],
+  "game_subcategory": [
+    "table"
+  ],
+  "updatedAt": {
+    "$date": "2023-06-08T07:05:01.982Z"
+  }
+}]
