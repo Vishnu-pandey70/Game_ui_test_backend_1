@@ -10,7 +10,7 @@
     const [sortBy, setSortBy] = useState("");
 
     useEffect(() => {
-        fetch("http://localhost:5000/api/games")
+        fetch("https://game-ui-test-backend-1.onrender.com/api/games")
         .then((res) => res.json())
         .then((data) => {
             
@@ -71,7 +71,7 @@
 
     
         updatedGames.forEach((game) => {
-        fetch(`http://localhost:5000/api/games/${game._id}/priority`, {
+        fetch(`https://game-ui-test-backend-1.onrender.com/api/games/${game._id}/priority`, {
             method: "PATCH",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ priority: game.priority }),

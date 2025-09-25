@@ -9,7 +9,7 @@ function UserPanel() {
   const [sortBy, setSortBy] = useState("");
 
 useEffect(() => {
-  fetch("http://localhost:5000/api/games")
+  fetch("https://game-ui-test-backend-1.onrender.com/api/games")
     .then(res => res.json())
     .then(data => {
       
