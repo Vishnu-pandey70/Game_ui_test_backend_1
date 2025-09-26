@@ -66,23 +66,4 @@ router.patch("/:id/priority", async (req, res) => {
 });
 
 
-// // Update game priority (drag-and-drop)
-// // Update game priorities after sorting/drag-drop
-// router.put("/update-priority", async (req, res) => {
-//   try {
-//     const { games } = req.body; // Array of {_id, priority}
-
-//     const updatePromises = games.map(g =>
-//       Game.findByIdAndUpdate(g._id, { priority: g.priority })
-//     );
-
-//     await Promise.all(updatePromises);
-//     res.json({ message: "Priority updated successfully" });
-//   } catch (err) {
-//     res.status(500).json({ error: err.message });
-//   }
-// });
-
-
-
 module.exports = router;

@@ -1,0 +1,23 @@
+.game-card {
+  border-radius: 15px;
+  background-color: #1e1e1e;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.game-card:hover,
+.game-card:focus,
+.game-card:active {
+  border-color: #facc15;
+  box-shadow: 0 0 15px #facc15;
+}
+
+/* For mobile devices without hover */
+@media (hover: none) {
+  .game-card:active {
+    border-color: #facc15;
+    box-shadow: 0 0 15px #facc15;
+  }
+}

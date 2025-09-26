@@ -1,113 +1,254 @@
 import React, { useEffect, useState } from "react";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import "./UserPanel.css"; 
 
 function UserPanel() {
   const [games, setGames] = useState([]);
-  const [filteredGames, setFilteredGames] = useState([]);
-  const [categoryFilter, setCategoryFilter] = useState("");
-  const [subcategoryFilter, setSubcategoryFilter] = useState("");
-  const [providerFilter, setProviderFilter] = useState("");
-  const [sortBy, setSortBy] = useState("");
-
-useEffect(() => {
-  fetch("https://game-ui-test-backend-1.onrender.com/api/games")
-    .then(res => res.json())
-    .then(data => {
-      
-      const sorted = data.sort((a, b) => (a.priority || 0) - (b.priority || 0));
-      setGames(sorted);
-    })
-    .catch(err => console.error(err));
-}, []);
-
-
-  const getCategoryName = (gameCategory) => {
-    if (!gameCategory || Object.keys(gameCategory).length === 0) return "N/A";
-    const key = Object.keys(gameCategory).find(k => gameCategory[k] !== "") || Object.keys(gameCategory)[0];
-    return key;
-  };
+  const [activeCategory, setActiveCategory] = useState("Discover");
+  const [categories, setCategories] = useState([]);
+  const [tags, setTags] = useState([]);
+  const [selectedTag, setSelectedTag] = useState(null);
 
   useEffect(() => {
-    let temp = [...games];
+    fetch("http://localhost:5000/api/games")
+      .then((res) => res.json())
+      .then((data) => {
+        const sorted = data.sort((a, b) => (a.priority || 0) - (b.priority || 0));
+        setGames(sorted);
 
-    
-    if (categoryFilter) temp = temp.filter(g => getCategoryName(g.game_category) === categoryFilter);
-    if (subcategoryFilter) temp = temp.filter(g => (g.game_subcategory || []).includes(subcategoryFilter));
-    if (providerFilter) temp = temp.filter(g => g.provider_name === providerFilter);
+        let uniqueCategories = [
+          "Discover",
+          ...new Set(
+            sorted.map((g) => {
+              if (!g.game_category || Object.keys(g.game_category).length === 0)
+                return "Others";
+              return (
+                Object.keys(g.game_category).find((k) => g.game_category[k] !== "") ||
+                Object.keys(g.game_category)[0]
+              );
+            })
+          ),
+        ];
 
-    
-    if (sortBy === "category") {
-      temp.sort((a, b) => getCategoryName(a.game_category).localeCompare(getCategoryName(b.game_category)));
-    } else if (sortBy === "subcategory") {
-      temp.sort((a, b) => {
-        const subA = (a.game_subcategory || [])[0] || "";
-        const subB = (b.game_subcategory || [])[0] || "";
-        return subA.localeCompare(subB);
-      });
-    }
-    else {
-    temp.sort((a, b) => (a.priority || 0) - (b.priority || 0));
-  }
+        uniqueCategories = uniqueCategories.filter((c) => c !== "Others");
+        uniqueCategories.push("Others");
+        setCategories(uniqueCategories);
 
-    setFilteredGames(temp);
-  }, [games, categoryFilter, subcategoryFilter, providerFilter, sortBy]);
+        const uniqueTags = [...new Set(sorted.flatMap((g) => g.game_tag || []))];
+        setTags(uniqueTags);
+      })
+      .catch((err) => console.error(err));
+  }, []);
 
-  
-  const categories = [...new Set(games.map(g => getCategoryName(g.game_category)))];
-  const subcategories = [...new Set(games.flatMap(g => g.game_subcategory || []))];
-  const providers = [...new Set(games.map(g => g.provider_name).filter(Boolean))];
+  const getCategoryName = (gameCategory) => {
+    if (!gameCategory || Object.keys(gameCategory).length === 0) return "Others";
+    return (
+      Object.keys(gameCategory).find((k) => gameCategory[k] !== "") ||
+      Object.keys(gameCategory)[0]
+    );
+  };
+
+  const filteredByCategory =
+    activeCategory === "Discover"
+      ? games
+      : games.filter((g) => getCategoryName(g.game_category) === activeCategory);
+
+  const selectedTagGames = selectedTag
+    ? filteredByCategory.filter((g) => (g.game_tag || []).includes(selectedTag))
+    : [];
+
+  const scrollRow = (tag, direction) => {
+    const row = document.getElementById(`row-${tag}`);
+    if (!row) return;
+
+    const scrollAmount = 300;
+    row.scrollBy({ left: direction === "left" ? -scrollAmount : scrollAmount, behavior: "smooth" });
+  };
 
   return (
-    <div className="container my-4">
-      <h2 className="mb-4">User Game Panel</h2>
+    <div style={{ backgroundColor: "#121212", minHeight: "100vh", color: "white" }}>
+      <div className="container py-4">
 
+        {!selectedTag && (
+          <>
+            <h2 className="mb-4 text-center" style={{ color: "#facc15", fontWeight: "bold" }}>
+              User Game Panel
+            </h2>
 
-      <div className="row mb-3">
-        <div className="col-md-3">
-          <select className="form-select" value={categoryFilter} onChange={e => setCategoryFilter(e.target.value)}>
-            <option value="">All Categories</option>
-            {categories.map(cat => <option key={cat} value={cat}>{cat}</option>)}
-          </select>
-        </div>
-        <div className="col-md-3">
-          <select className="form-select" value={subcategoryFilter} onChange={e => setSubcategoryFilter(e.target.value)}>
-            <option value="">All Subcategories</option>
-            {subcategories.map(sub => <option key={sub} value={sub}>{sub}</option>)}
-          </select>
-        </div>
-        <div className="col-md-3">
-          <select className="form-select" value={providerFilter} onChange={e => setProviderFilter(e.target.value)}>
-            <option value="">All Providers</option>
-            {providers.map(p => <option key={p} value={p}>{p}</option>)}
-          </select>
-        </div>
-        <div className="col-md-3">
-          <select className="form-select" value={sortBy} onChange={e => setSortBy(e.target.value)}>
-            <option value="">Sort By</option>
-            <option value="category">Category</option>
-            <option value="subcategory">Subcategory</option>
-          </select>
-        </div>
-      </div>
+            
+            <div className="d-flex flex-wrap justify-content-center mb-4">
+              {categories.map((cat) => (
+                <button
+                  key={cat}
+                  className={`btn me-2 mb-2 rounded-pill ${
+                    activeCategory === cat ? "btn-warning text-dark fw-bold" : "btn-outline-light"
+                  }`}
+                  onClick={() => setActiveCategory(cat)}
+                >
+                  {cat}
+                </button>
+              ))}
+            </div>
 
-      
-      <div className="row">
-        {(filteredGames || []).length === 0 && <p>No games found</p>}
-        {(filteredGames || []).map(game => (
-          <div key={game._id} className="col-md-3 mb-4">
-            <div className="card h-100">
-              <img src={game.game_icon} className="card-img-top" alt={game.game_name} />
-              <div className="card-body">
-                <h5 className="card-title">{game.game_name}</h5>
-                <p className="card-text">
-                  Category: {getCategoryName(game.game_category)} <br/>
-                  Subcategory: {(game.game_subcategory || []).join(", ") || "N/A"} <br/>
-                  Provider: {game.provider_name || "N/A"} <br/>
-                  Status: {game.game_status ? "Active" : "Inactive"}
-                </p>
-              </div>
+            
+            {tags.map((tag) => {
+              const taggedGames = filteredByCategory.filter((g) =>
+                (g.game_tag || []).includes(tag)
+              );
+              if (taggedGames.length === 0) return null;
+
+              return (
+                <div key={tag} className="mb-5 position-relative">
+                  <div className="d-flex justify-content-between align-items-center mb-3">
+                    <h4 className="mb-0" style={{ color: "#facc15" }}>
+                      {tag}
+                    </h4>
+
+                    {taggedGames.length > 4 && (
+                      <button
+                        className="btn btn-sm btn-outline-light rounded-pill"
+                        onClick={() => setSelectedTag(tag)}
+                      >
+                        Show More
+                      </button>
+                    )}
+                  </div>
+
+                
+                  <div className="position-relative">
+                    
+                    {taggedGames.length > 4 && (
+                      <button
+                        className="position-absolute top-50 start-0 translate-middle-y btn btn-dark rounded-circle"
+                        style={{ zIndex: 10, width: "35px", height: "35px", opacity: 0.8 }}
+                        onClick={() => scrollRow(tag, "left")}
+                      >
+                        <i className="bi bi-chevron-left"></i>
+                      </button>
+                    )}
+
+                    
+                    {taggedGames.length > 4 && (
+                      <button
+                        className="position-absolute top-50 end-0 translate-middle-y btn btn-dark rounded-circle"
+                        style={{ zIndex: 10, width: "35px", height: "35px", opacity: 0.8 }}
+                        onClick={() => scrollRow(tag, "right")}
+                      >
+                        <i className="bi bi-chevron-right"></i>
+                      </button>
+                    )}
+
+                    <div
+                      className="row flex-nowrap"
+                      id={`row-${tag}`}
+                      style={{
+                        overflowX: "hidden",
+                        scrollBehavior: "smooth",
+                      }}
+                    >
+                      {taggedGames.map((game) => (
+                        <div key={game._id} className="col-md-3 col-sm-6 mb-3">
+                          <div className="card h-100 shadow-lg game-card">
+                            <img
+                              src={game.game_icon}
+                              className="card-img-top mb-2"
+                              alt={game.game_name}
+                              
+                              style={{ height: "220px", objectFit: "cover", borderRadius: "15px 15px 0 0" }}
+                            />
+                            <div
+                              className="card-body d-flex justify-content-between align-items-center p-2 mb-1"
+                              style={{ flexGrow: 1 }}
+                            >
+                              <h6
+                                className="card-title text-white fw-bold"
+                                style={{
+                                  fontSize: "0.95rem",
+                                  overflow: "hidden",
+                                  textOverflow: "ellipsis",
+                                  whiteSpace: "nowrap",
+                                }}
+                              >
+                                {game.game_name}
+                              </h6>
+                              <button
+                                className="btn btn-sm btn-warning text-dark fw-bold"
+                                style={{
+                                  fontSize: "0.75rem",
+                                  padding: "3px 8px",
+                                  borderRadius: "12px",
+                                }}
+                              >
+                                Game Info
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+          </>
+        )}
+
+        {/* Full Tag View */}
+        {selectedTag && (
+          <div>
+            <div className="d-flex justify-content-between align-items-center mb-4">
+              <h2 className="mb-0" style={{ color: "#facc15", fontWeight: "bold" }}>
+                {selectedTag} Games
+              </h2>
+              <button
+                className="btn btn-sm btn-outline-light rounded-pill"
+                onClick={() => setSelectedTag(null)}
+              >
+                Back
+              </button>
+            </div>
+
+            <div className="row">
+              {selectedTagGames.map((game) => (
+                <div key={game._id} className="col-lg-3 col-md-4 col-sm-6 mb-4">
+                  <div className="card h-100 shadow-lg game-card">
+                    <img
+                      src={game.game_icon}
+                      className="card-img-top mb-2"
+                      alt={game.game_name}
+                      style={{ height: "220px", objectFit: "cover", borderRadius: "15px 15px 0 0" }}
+                    />
+                    <div
+                      className="card-body d-flex justify-content-between align-items-center p-2 mb-1"
+                    >
+                      <h6
+                        className="card-title mb-0 text-white fw-bold"
+                        style={{
+                          fontSize: "0.95rem",
+                          overflow: "hidden",
+                          textOverflow: "ellipsis",
+                          whiteSpace: "nowrap",
+                        }}
+                      >
+                        {game.game_name}
+                      </h6>
+                      <button
+                        className="btn btn-sm btn-warning text-dark fw-bold"
+                        style={{
+                          fontSize: "0.75rem",
+                          padding: "3px 8px",
+                          borderRadius: "12px",
+                        }}
+                      >
+                        Game Info
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        ))}
+        )}
       </div>
     </div>
   );
