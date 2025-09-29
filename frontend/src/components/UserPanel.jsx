@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "bootstrap-icons/font/bootstrap-icons.css";
-import "./UserPanel.css"; 
+import "./UserPanel.css";
 
 function UserPanel() {
   const [games, setGames] = useState([]);
@@ -8,6 +8,8 @@ function UserPanel() {
   const [categories, setCategories] = useState([]);
   const [tags, setTags] = useState([]);
   const [selectedTag, setSelectedTag] = useState(null);
+  const [providers, setProviders] = useState([]);
+  const [selectedProvider, setSelectedProvider] = useState(null);
 
   useEffect(() => {
     fetch("http://localhost:5000/api/games")
@@ -16,6 +18,7 @@ function UserPanel() {
         const sorted = data.sort((a, b) => (a.priority || 0) - (b.priority || 0));
         setGames(sorted);
 
+        // Unique Categories
         let uniqueCategories = [
           "Discover",
           ...new Set(
@@ -34,8 +37,13 @@ function UserPanel() {
         uniqueCategories.push("Others");
         setCategories(uniqueCategories);
 
+        // Unique Tags
         const uniqueTags = [...new Set(sorted.flatMap((g) => g.game_tag || []))];
         setTags(uniqueTags);
+
+        // Unique Providers
+        const uniqueProviders = [...new Set(sorted.map((g) => g.provider_name).filter(Boolean))];
+        setProviders(uniqueProviders);
       })
       .catch((err) => console.error(err));
   }, []);
@@ -57,10 +65,13 @@ function UserPanel() {
     ? filteredByCategory.filter((g) => (g.game_tag || []).includes(selectedTag))
     : [];
 
+  const selectedProviderGames = selectedProvider
+    ? filteredByCategory.filter((g) => g.provider_name === selectedProvider)
+    : [];
+
   const scrollRow = (tag, direction) => {
     const row = document.getElementById(`row-${tag}`);
     if (!row) return;
-
     const scrollAmount = 300;
     row.scrollBy({ left: direction === "left" ? -scrollAmount : scrollAmount, behavior: "smooth" });
   };
@@ -68,14 +79,13 @@ function UserPanel() {
   return (
     <div style={{ backgroundColor: "#121212", minHeight: "100vh", color: "white" }}>
       <div className="container py-4">
-
-        {!selectedTag && (
+        {!selectedTag && !selectedProvider && (
           <>
             <h2 className="mb-4 text-center" style={{ color: "#facc15", fontWeight: "bold" }}>
               User Game Panel
             </h2>
 
-            
+            {/* Category Buttons */}
             <div className="d-flex flex-wrap justify-content-center mb-4">
               {categories.map((cat) => (
                 <button
@@ -83,14 +93,18 @@ function UserPanel() {
                   className={`btn me-2 mb-2 rounded-pill ${
                     activeCategory === cat ? "btn-warning text-dark fw-bold" : "btn-outline-light"
                   }`}
-                  onClick={() => setActiveCategory(cat)}
+                  onClick={() => {
+                    setActiveCategory(cat);
+                    setSelectedTag(null);
+                    setSelectedProvider(null);
+                  }}
                 >
                   {cat}
                 </button>
               ))}
             </div>
 
-            
+            {/* Tag Rows */}
             {tags.map((tag) => {
               const taggedGames = filteredByCategory.filter((g) =>
                 (g.game_tag || []).includes(tag)
@@ -114,9 +128,7 @@ function UserPanel() {
                     )}
                   </div>
 
-                
                   <div className="position-relative">
-                    
                     {taggedGames.length > 4 && (
                       <button
                         className="position-absolute top-50 start-0 translate-middle-y btn btn-dark rounded-circle"
@@ -127,7 +139,6 @@ function UserPanel() {
                       </button>
                     )}
 
-                    
                     {taggedGames.length > 4 && (
                       <button
                         className="position-absolute top-50 end-0 translate-middle-y btn btn-dark rounded-circle"
@@ -153,13 +164,13 @@ function UserPanel() {
                               src={game.game_icon}
                               className="card-img-top mb-2"
                               alt={game.game_name}
-                              
-                              style={{ height: "220px", objectFit: "cover", borderRadius: "15px 15px 0 0" }}
+                              style={{
+                                height: "220px",
+                                objectFit: "cover",
+                                borderRadius: "15px 15px 0 0",
+                              }}
                             />
-                            <div
-                              className="card-body d-flex justify-content-between align-items-center p-2 mb-1"
-                              style={{ flexGrow: 1 }}
-                            >
+                            <div className="card-body d-flex justify-content-between align-items-center p-2 mb-1">
                               <h6
                                 className="card-title text-white fw-bold"
                                 style={{
@@ -190,11 +201,29 @@ function UserPanel() {
                 </div>
               );
             })}
+
+            {/* Providers Section */}
+            <div className="mb-5">
+              <h3 className="mb-3" style={{ color: "#facc15" }}>
+                Game Providers
+              </h3>
+              <div className="d-flex flex-wrap gap-2">
+                {providers.map((prov) => (
+                  <button
+                    key={prov}
+                    className="btn btn-outline-light rounded-pill px-3 py-2"
+                    onClick={() => setSelectedProvider(prov)}
+                  >
+                    {prov}
+                  </button>
+                ))}
+              </div>
+            </div>
           </>
         )}
 
         {/* Full Tag View */}
-        {selectedTag && (
+        {selectedTag && !selectedProvider && (
           <div>
             <div className="d-flex justify-content-between align-items-center mb-4">
               <h2 className="mb-0" style={{ color: "#facc15", fontWeight: "bold" }}>
@@ -218,9 +247,7 @@ function UserPanel() {
                       alt={game.game_name}
                       style={{ height: "220px", objectFit: "cover", borderRadius: "15px 15px 0 0" }}
                     />
-                    <div
-                      className="card-body d-flex justify-content-between align-items-center p-2 mb-1"
-                    >
+                    <div className="card-body d-flex justify-content-between align-items-center p-2 mb-1">
                       <h6
                         className="card-title mb-0 text-white fw-bold"
                         style={{
@@ -232,14 +259,55 @@ function UserPanel() {
                       >
                         {game.game_name}
                       </h6>
-                      <button
-                        className="btn btn-sm btn-warning text-dark fw-bold"
+                      <button className="btn btn-sm btn-warning text-dark fw-bold">
+                        Game Info
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Full Provider View */}
+        {selectedProvider && (
+          <div>
+            <div className="d-flex justify-content-between align-items-center mb-4">
+              <h2 className="mb-0" style={{ color: "#facc15", fontWeight: "bold" }}>
+                {selectedProvider} Games
+              </h2>
+              <button
+                className="btn btn-sm btn-outline-light rounded-pill"
+                onClick={() => setSelectedProvider(null)}
+              >
+                Back
+              </button>
+            </div>
+
+            <div className="row">
+              {selectedProviderGames.map((game) => (
+                <div key={game._id} className="col-lg-3 col-md-4 col-sm-6 mb-4">
+                  <div className="card h-100 shadow-lg game-card">
+                    <img
+                      src={game.game_icon}
+                      className="card-img-top mb-2"
+                      alt={game.game_name}
+                      style={{ height: "220px", objectFit: "cover", borderRadius: "15px 15px 0 0" }}
+                    />
+                    <div className="card-body d-flex justify-content-between align-items-center p-2 mb-1">
+                      <h6
+                        className="card-title mb-0 text-white fw-bold"
                         style={{
-                          fontSize: "0.75rem",
-                          padding: "3px 8px",
-                          borderRadius: "12px",
+                          fontSize: "0.95rem",
+                          overflow: "hidden",
+                          textOverflow: "ellipsis",
+                          whiteSpace: "nowrap",
                         }}
                       >
+                        {game.game_name}
+                      </h6>
+                      <button className="btn btn-sm btn-warning text-dark fw-bold">
                         Game Info
                       </button>
                     </div>
