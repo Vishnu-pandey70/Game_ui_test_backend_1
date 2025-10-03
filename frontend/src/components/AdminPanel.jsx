@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { DragDropContext, Droppable, Draggable } from "@hello-pangea/dnd";
 import { Link } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function AdminPanel() {
   const [games, setGames] = useState([]);
@@ -48,58 +50,179 @@ function AdminPanel() {
   const providers = [...new Set(games.map((g) => g.provider_name).filter(Boolean))];
   const tags = [...new Set(games.flatMap((g) => g.game_tag || []))];
 
- const onDragEnd = (result) => {
+//  const onDragEnd = (result) => {
+//   if (!result.destination) return;
+
+//   const sourceIndex = result.source.index;
+//   const destinationIndex = result.destination.index;
+
+//   // Create a mapping from filteredGames to indexes in the full games array
+//   const reorderedGameId = filteredGames[sourceIndex]._id;
+
+//   // Clone the original games list
+//   const updatedGames = [...games];
+
+//   // Find the index of the dragged game in the original games list
+//   const draggedGameIndex = updatedGames.findIndex(game => game._id === reorderedGameId);
+//   const [draggedGame] = updatedGames.splice(draggedGameIndex, 1);
+
+//   // Figure out where to re-insert in the full list based on filtered destination
+//   const destinationGameId = filteredGames[destinationIndex]?._id;
+//   const destinationGameIndex = updatedGames.findIndex(game => game._id === destinationGameId);
+
+//   updatedGames.splice(destinationGameIndex, 0, draggedGame);
+
+//   // Reassign priorities
+//   const reorderedWithPriorities = updatedGames.map((g, i) => ({
+//     ...g,
+//     priority: i
+//   }));
+
+//   setGames(reorderedWithPriorities); // ← full updated list
+//   // filteredGames will be updated automatically via useEffect
+
+//   // Sync to backend
+//   fetch(`http://localhost:5000/api/games/update-priorities`, {
+//     method: "PATCH",
+//     headers: { "Content-Type": "application/json" },
+//     body: JSON.stringify({
+//       games: reorderedWithPriorities.map((game) => ({
+//         _id: game._id,
+//         priority: game.priority,
+//       })),
+//     }),
+//   })
+//     .then((res) => res.json())
+//     .then((data) => console.log("Priorities updated successfully:", data))
+//     .catch((err) => console.error("Error updating priorities:", err));
+// };
+
+
+// const onDragEnd = (result) => {
+//   if (!result.destination) return;
+
+//   const sourceIndex = result.source.index;
+//   const destinationIndex = result.destination.index;
+//   const reorderedGameId = filteredGames[sourceIndex]._id;
+
+//   const updatedGames = [...filteredGames];
+//   const [draggedGame] = updatedGames.splice(sourceIndex, 1);
+//   updatedGames.splice(destinationIndex, 0, draggedGame);
+
+//   // Reassign priorities only inside current tag filter
+//   const reorderedWithPriorities = updatedGames.map((g, i) => ({
+//     ...g,
+//     priority: i
+//   }));
+
+//   setFilteredGames(reorderedWithPriorities);
+
+//   // Update full games list with new tag priorities
+//   const updatedAllGames = games.map((g) => {
+//     const match = reorderedWithPriorities.find((fg) => fg._id === g._id);
+//     if (match) {
+//       return {
+//         ...g,
+//         tag_priorities: {
+//           ...g.tag_priorities,
+//           [tagFilter]: match.priority
+//         }
+//       };
+//     }
+//     return g;
+//   });
+
+//   setGames(updatedAllGames);
+
+  
+//   fetch(`http://localhost:5000/api/games/update-priorities`, {
+//     method: "PATCH",
+//     headers: { "Content-Type": "application/json" },
+//     body: JSON.stringify({
+//       tag: tagFilter,
+//       games: reorderedWithPriorities.map((game) => ({
+//         _id: game._id,
+//         priority: game.priority,
+//       })),
+//     }),
+//   })
+//     .then((res) => res.json())
+//     .then((data) => {
+//         console.log("Priorities updated:", data);
+//         toast.success("Game order updated successfully ✅", { position: "top-right" });
+//       })
+//     .catch((err) => {
+//         console.error("Error updating priorities:", err);
+//         toast.error("Error updating game order ❌", { position: "top-right" });
+//       });
+// };
+
+const onDragEnd = (result) => {
   if (!result.destination) return;
 
   const sourceIndex = result.source.index;
   const destinationIndex = result.destination.index;
 
-  // Create a mapping from filteredGames to indexes in the full games array
-  const reorderedGameId = filteredGames[sourceIndex]._id;
+  // Clone the filtered list
+  const updatedFiltered = Array.from(filteredGames);
+  const [movedGame] = updatedFiltered.splice(sourceIndex, 1);
+  updatedFiltered.splice(destinationIndex, 0, movedGame);
 
-  // Clone the original games list
-  const updatedGames = [...games];
+  if (tagFilter) {
+    // TAG-BASED drag
+    const reordered = updatedFiltered.map((g, i) => ({
+      ...g,
+      tag_priorities: { ...g.tag_priorities, [tagFilter]: i },
+    }));
 
-  // Find the index of the dragged game in the original games list
-  const draggedGameIndex = updatedGames.findIndex(game => game._id === reorderedGameId);
-  const [draggedGame] = updatedGames.splice(draggedGameIndex, 1);
+    setFilteredGames(reordered);
 
-  // Figure out where to re-insert in the full list based on filtered destination
-  const destinationGameId = filteredGames[destinationIndex]?._id;
-  const destinationGameIndex = updatedGames.findIndex(game => game._id === destinationGameId);
+    const updatedAllGames = games.map((g) => {
+      const match = reordered.find((fg) => fg._id === g._id);
+      if (match) return { ...g, tag_priorities: match.tag_priorities };
+      return g;
+    });
+    setGames(updatedAllGames);
 
-  updatedGames.splice(destinationGameIndex, 0, draggedGame);
+    fetch("http://localhost:5000/api/games/update-priorities", {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        tag: tagFilter,
+        games: reordered.map((g) => ({ _id: g._id, priority: g.tag_priorities[tagFilter] })),
+      }),
+    })
+      .then((res) => res.json())
+      .then(() => toast.success("Tag priorities updated ✅"))
+      .catch(() => toast.error("Error updating priorities ❌"));
 
-  // Reassign priorities
-  const reorderedWithPriorities = updatedGames.map((g, i) => ({
-    ...g,
-    priority: i
-  }));
+  } else {
 
-  setGames(reorderedWithPriorities); // ← full updated list
-  // filteredGames will be updated automatically via useEffect
+    const reordered = updatedFiltered.map((g, i) => ({ ...g, priority: i }));
+    setFilteredGames(reordered);
+    setGames(reordered);
 
-  // Sync to backend
-  fetch(`http://localhost:5000/api/games/update-priorities`, {
-    method: "PATCH",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      games: reorderedWithPriorities.map((game) => ({
-        _id: game._id,
-        priority: game.priority,
-      })),
-    }),
-  })
-    .then((res) => res.json())
-    .then((data) => console.log("Priorities updated successfully:", data))
-    .catch((err) => console.error("Error updating priorities:", err));
+    fetch("http://localhost:5000/api/games/update-priorities", {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        tag: null,
+        games: reordered.map((g) => ({ _id: g._id, priority: g.priority })),
+      }),
+    })
+      .then((res) => res.json())
+      .then(() => toast.success("Global priorities updated ✅"))
+      .catch(() => toast.error("Error updating priorities ❌"));
+  }
 };
+
+
 
 
   return (
     <div className="admin-container">
-      {/* Sidebar */}
-      <aside className={`sidebar ${sidebarOpen ? "open" : ""}`}>
+         <ToastContainer />
+               <aside className={`sidebar ${sidebarOpen ? "open" : ""}`}>
         <div className="logo">
           <span>OMS</span>
           <div className="operator">Operator</div>
@@ -127,12 +250,10 @@ function AdminPanel() {
         </ul>
       </aside>
 
-      {/* Overlay */}
       {sidebarOpen && <div className="sidebar-overlay" onClick={() => setSidebarOpen(false)}></div>}
 
-      {/* Main Content */}
       <main className="main-content">
-        {/* Topbar */}
+
         <div className="topbar">
           <button className="hamburger" onClick={() => setSidebarOpen(!sidebarOpen)}>☰</button>
           <div className="icons">
@@ -143,7 +264,6 @@ function AdminPanel() {
           <div className="badge">StagingApp(230201)</div>
         </div>
 
-        {/* Filters */}
         <div className="filters">
           <select value={categoryFilter} onChange={(e) => setCategoryFilter(e.target.value)}>
             <option value="">All Categories</option>

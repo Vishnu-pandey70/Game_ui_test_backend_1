@@ -16,13 +16,15 @@ const GameSchema = new mongoose.Schema(
     game_code: { type: String },
     game_name: { type: String },
     game_icon: { type: String },
-    
+
     game_category: { type: Object, required: false },
     game_subcategory: { type: [String], default: [] },
     game_tag: { type: [String], default: [] },
     game_status: { type: Boolean, default: true },
     priority: { type: Number, default: 0 },
-    
+
+    tag_priorities: { type: Map, of: Number, default: {} },
+
     operational_status: { type: String },
     provider_name: { type: String },
     provider_code: { type: String },
