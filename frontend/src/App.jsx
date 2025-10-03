@@ -6,16 +6,18 @@ import UserPanel from "./components/UserPanel";
 function App() {
   return (
     <Router>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark p-3">
+
+      {/* <nav className="navbar navbar-expand-lg navbar-dark bg-dark p-3">
         <Link className="navbar-brand" to="/">Game Portal</Link>
         <div className="navbar-nav">
-          <Link className="nav-link" to="/admin">Admin</Link>
+          <Link className="nav-link" to="/">Admin</Link>
           <Link className="nav-link" to="/user">User</Link>
         </div>
-      </nav>
+      </nav> */}
+
 
       <Routes>
-        <Route path="/admin" element={<AdminPanel />} />
+        <Route path="/" element={<AdminPanel />} />
         <Route path="/user" element={<UserPanel />} />
       </Routes>
     </Router>

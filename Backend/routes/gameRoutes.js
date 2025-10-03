@@ -14,17 +14,6 @@ router.get("/", async (req, res) => {
 
     let games = await Game.find(query);
 
-
-    if (req.query.sortBy === "category") {
-      games.sort((a, b) =>
-        JSON.stringify(a.game_category).localeCompare(JSON.stringify(b.game_category))
-      );
-    } else if (req.query.sortBy === "subcategory") {
-      games.sort((a, b) =>
-        (a.game_subcategory[0] || "").localeCompare(b.game_subcategory[0] || "")
-      );
-    }
-
     res.json(games);
   } catch (err) {
     res.status(500).json({ error: err.message });
@@ -48,9 +37,6 @@ router.get("/filters", async (req, res) => {
   }
 });
 
-
-
-
 router.patch("/:id/priority", async (req, res) => {
   try {
     const { priority } = req.body;
@@ -64,6 +50,28 @@ router.patch("/:id/priority", async (req, res) => {
     res.status(400).json({ error: err.message });
   }
 });
+
+
+router.patch("/update-priorities", async (req, res) => {
+  try {
+    const { games } = req.body;
+  
+    const bulkOps = games.map((g) => ({
+      updateOne: {
+        filter: { _id: g._id },
+        update: { $set: { priority: g.priority } },
+      },
+    }));
+
+    await Game.bulkWrite(bulkOps);
+    res.json({ success: true, message: "Priorities updated successfully" });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
+
+
 
 
 module.exports = router;

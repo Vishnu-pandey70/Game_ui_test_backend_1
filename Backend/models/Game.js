@@ -22,6 +22,7 @@ const GameSchema = new mongoose.Schema(
     game_tag: { type: [String], default: [] },
     game_status: { type: Boolean, default: true },
     priority: { type: Number, default: 0 },
+    
     operational_status: { type: String },
     provider_name: { type: String },
     provider_code: { type: String },
